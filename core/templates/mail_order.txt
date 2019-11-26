@@ -1,0 +1,6 @@
+Hello, dear {{ user_name }}!
+
+You ordered ...
+
+---
+Best regards, SuperShop!
