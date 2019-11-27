@@ -40,3 +40,11 @@ import requests
 #     price=Product.objects.get(id=i.Product_ID.id)
 #     price.FixedPrice=price.FixedPrice+price.Discountprice
 #     price.save()
+product=Product.objects.filter(User_ID=9)
+for i in product:
+    print(i.Pic)
+    # if (i.Pic=='201901101717092859.jpeg'):
+    #     print("TRUE")
+    #     new='https://storage.kingbestmall.com/images/'+i.Pic
+    #     i.Pic=new
+    #     i.save()

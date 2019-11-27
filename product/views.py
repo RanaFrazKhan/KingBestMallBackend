@@ -324,7 +324,10 @@ def onePicUpload(request):
     # userdata0 = {'path': StoreName + '/' + ProductID + '/', 'filename': request.FILES['input_file'].name}
     files0 = {'fileToUpload': request.FILES['input_file']}
     a = requests.post(api_url, files=files0,  verify=False)
-    print(a.content)
-    print('ok')
-
-    return Response({'msg': a.content}, status=status.HTTP_200_OK)
+    # print(a.content)
+    # print('ok')
+    path=str(a.content)
+    path=path[2:-1]
+    # print('https://storage.kingbestmall.com/images/'+path[1:])
+    fullpath='https://storage.kingbestmall.com/images/'+path
+    return Response({'msg':fullpath}, status=status.HTTP_200_OK)

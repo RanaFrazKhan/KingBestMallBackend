@@ -12,7 +12,7 @@ class ProductSerializer(serializers.ModelSerializer):
     #         return request.user.id
     class Meta:
         model=Product
-        fields=('P_Title','User_ID','Cat_Name','StoreName','Sub_Cat_Name','Sub_Sub_Cat_Name','P_Des','P_Condition','Quantity','MaxQuantity',
+        fields=('id','P_Title','User_ID','Cat_Name','StoreName','Sub_Cat_Name','Sub_Sub_Cat_Name','P_Des','P_Condition','Quantity','MaxQuantity',
                 'Pic','DicountStatus','Discountprice','Discountpersentage','product_ad_active','FixedPrice','PurchasedPrice')
 
     # def create(self, validated_data):
